@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body {
+      background-color: #212121;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    #wrapper {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #2c2c2c;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+    }
+
+    input[type="submit"] {
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005fa3;
+    }
+
+    .resultParas {
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    .lowOrHi {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #ffa726;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Number Guessing Game</h1>
+    <p>Try and guess a random number between <strong>1</strong> and <strong>100</strong>.</p>
+    <p>You have <strong>10</strong> attempts to guess the right number.</p>
+
+    <form class="form" autocomplete="off">
+      <label for="guessField">Enter your guess:</label>
+      <input type="text" id="guessField" class="guessField" aria-label="Guess a number between 1 and 100" />
+      <input type="submit" id="subt" value="Submit Guess" class="guessSubmit" />
+    </form>
+
+    <div class="resultParas">
+      <p>Previous Guesses: <span class="guesses"></span></p>
+      <p>Guesses Remaining: <span class="lastResult">10</span></p>
+      <p class="lowOrHi"></p>
+    </div>
+  </div>
+
+  <script src="guessNumber.js"></script>
+</body>
+</html>
