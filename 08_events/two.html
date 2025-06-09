@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Events in Visual code studio</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function (){
+    //     console.log("Hello Hari");
+    // }, 5000);
+    const sayHello = function () {
+        console.log("Hello Hari");
+    };
+    const changeText = function () {
+        document.querySelector("h1").innerHTML= "JavaScript Events"
+    };
+    // setTimeout(sayHello, 5000);
+    const changeMe = setTimeout(changeText, 5000);
+    // clearTimeout(1); // This will not work as expected, since the ID is not set
+    // clearTimeout(changeMe); // This will clear the timeout set by changeMe
+    document.getElementById("stop").addEventListener("click", function () {
+        clearTimeout(changeMe);
+        console.log("Timeout cleared");
+    });
+</script>
+</html>
