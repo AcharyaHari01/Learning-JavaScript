@@ -1,18 +1,18 @@
 let randomNumber = parseInt(Math.random() * 100 + 1);
 
-const submit = document.querySelector('#subt');
-const userInput = document.querySelector('#guessField');
-const guessSlot = document.querySelector('.guesses');
-const remaining = document.querySelector('.lastResult');
-const lowOrHi = document.querySelector('.lowOrHi');
-const startOver = document.querySelector('.resultParas');
+const submit = document.querySelector('#subt'); // get the submit button
+const userInput = document.querySelector('#guessField'); // get the input field
+const guessSlot = document.querySelector('.guesses'); // get the guesses div
+const remaining = document.querySelector('.lastResult'); // get the remaining guesses div
+const lowOrHi = document.querySelector('.lowOrHi'); // get the low or hi div
+const startOver = document.querySelector('.resultParas'); // get the result paragraph
 
-const p = document.createElement('p');
+const p = document.createElement('p'); // Create a new paragraph element
 
-let prevGuess = [];
-let numGuess = 1;
+let prevGuess = []; // Create an array to store previous guesses
+let numGuess = 1; 
 
-let playGame = true;
+let playGame = true; 
 
 if (playGame) {
     submit.addEventListener('click', function (e) {
